@@ -9,22 +9,17 @@ import { useRouter } from 'next/router';
 function Blog({ posts, page }) {
   const router = useRouter();
   const { data, meta } = posts;
-  // const [dataPosts, setDataPosts] = useState([]);
   const { pagination } = meta;
-  // const { links } = pagination;
-  // current
-  // next
-  // previous
 
   return (
     <Layout title="Blog">
       <Header />
       <section className="container-fluid ">
-        <h1 className="p-lg-5 ">Blog Post</h1>
+        <h1 className={styles['text-title-blog']}>Blog Post</h1>
         <div className="row d-lg-flex justify-content-center align-items-center mt-5 mb-5">
-          <div className="col-lg-6">
-            <div className="row mb-4 d-flex justify-content-between border align-items-center">
-              <div className="col-4 d-flex justify-content-between bg-danger">
+          <div className="col-lg-6 col-md-8">
+            <div className="row mb-4 d-flex justify-content-between align-items-center">
+              <div className="col-lg-4 col-md-6  d-flex justify-content-between mb-sm-5 m-lg-0 m-md-0">
                 <button
                   type="button"
                   className="btn btn-secondary"
@@ -33,7 +28,7 @@ function Blog({ posts, page }) {
                   }}
                   disabled={page <= 1}
                 >
-                  previous
+                  <p className={styles['text-page']}>Previous</p>
                 </button>
                 <button
                   type="button"
@@ -41,19 +36,23 @@ function Blog({ posts, page }) {
                   onClick={() => {
                     router.push(`/blog?page=${page + 1}`);
                   }}
+                  disabled={page >= pagination.pages}
                 >
-                  next
+                  <p className={styles['text-page']}>Next</p>
                 </button>
               </div>
-              <div className="col-4 d-flex justify-content-between align-items-center">
+              <div className="col-lg-4 col-md-6 d-flex justify-content-between align-items-center">
                 <p className={styles['text-page']}>{`Page : ${page}`}</p>
                 <p
                   className={styles['text-page']}
                 >{`Total Page : ${pagination.pages}`}</p>
               </div>
             </div>
-            {data.length !== 0 &&
-              data.map((post, idx) => <Card key={idx} post={post} />)}
+            {data.length !== 0 ? (
+              data.map((post, idx) => <Card key={idx} post={post} />)
+            ) : (
+              <p className={styles['text-no-data']}>No data</p>
+            )}
           </div>
         </div>
         <ScrollButton />
@@ -65,19 +64,11 @@ function Blog({ posts, page }) {
 export default Blog;
 
 export async function getServerSideProps({ query: { page = 1 } }) {
-  const urlUsers = `https://gorest.co.in/public/v1/users?page=${page}`;
-
   const urlPosts = `https://gorest.co.in/public/v1/posts?page=${page}`;
-  const urlComments = 'https://gorest.co.in/public/v1/comments';
-
-  const resUsers = await axios.get(urlUsers);
   const resPosts = await axios.get(urlPosts);
-  const resComments = await axios.get(urlComments);
-  const users = resUsers.data;
   const posts = resPosts.data;
-  const comments = resComments.data;
 
   return {
-    props: { users, posts, comments, page: parseInt(page, 10) },
+    props: { posts, page: parseInt(page, 10) },
   };
 }

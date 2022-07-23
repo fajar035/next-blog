@@ -2,3 +2,22 @@
   font-family: 'Nunito';
   margin: 0;
 }
+
+.text-title-blog {
+  font-family: 'Nunito';
+  font-size: 50px;
+  font-weight: 700;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.text-no-data {
+  font-family: 'Poppins';
+  font-size: 30px;
+  margin: 120px;
+  text-align: center;
+  color: #6c757d;
+}
+
+@media only screen and (max-width: 425px) {
+}

@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import styles from 'src/commons/styles/Header.module.css';
 
 function Header() {
   const router = useRouter();
   const { route } = router;
   return (
-    <nav className="navbar navbar-expand-lg bg-light ps-lg-3 pe-lg-3">
+    <header className="navbar navbar-expand-lg bg-light ps-lg-3 pe-lg-3">
       <div className="container-fluid">
         <Link href="/">
-          <a className="navbar-brand">Blog-Next</a>
+          <a className={`navbar-brand ${styles['title-header']}`}>Blog-Next</a>
         </Link>
 
         <button
@@ -30,7 +31,11 @@ function Header() {
             <li className="nav-item">
               <Link href="/blog">
                 <a
-                  className={route === '/blog' ? 'nav-link active' : 'nav-link'}
+                  className={
+                    route === '/blog'
+                      ? `nav-link active ${styles['text-header']}`
+                      : `nav-link ${styles['text-header']}`
+                  }
                   aria-current="page"
                 >
                   Blog
@@ -40,7 +45,11 @@ function Header() {
             <li>
               <Link href="/user">
                 <a
-                  className={route === '/user' ? 'nav-link active' : 'nav-link'}
+                  className={
+                    route === '/user'
+                      ? `nav-link active ${styles['text-header']}`
+                      : `nav-link ${styles['text-header']}`
+                  }
                   aria-current="page"
                 >
                   User
@@ -50,7 +59,7 @@ function Header() {
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
 
