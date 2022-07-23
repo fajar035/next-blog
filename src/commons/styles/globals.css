@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+@keyframes goTop {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goHide {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+}
+
+.shown-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 90px;
+  bottom: 100px;
+  font-size: 3rem;
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+  background-color: darkslateblue;
+  animation: goTop 0.5s;
+}
+
+.hide-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  position: fixed;
+  right: 90px;
+  bottom: 100px;
+  width: 40px;
+  height: 40px;
+  font-size: 3rem;
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+  background-color: darkslateblue;
+  opacity: 0;
+  animation: goHide 0.5s;
+}
