@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Logo](https://doc-00-14-docs.googleusercontent.com/docs/securesc/gn3foru184d9lmm33nfludglq6o48s50/end4m37tfu120dk3om0klhujuqtha4r4/1658763075000/16282622975581773921/16282622975581773921/18KIzYDxOLm6VIlz4vP8Q7jtw9Ml5RwKo?e=download&ax=ACxEAsbc0x-Ia2sQbEqYOeGTvK7mUW748MoxqJzYZVo-rLqpBlmH7F69Yf7z-3sVEy65D7xZves_dABy9wPnffnkM_UXvdR6JDM-VRl6FIaVPXMnbYKwydUWrETKYIfvvloKlUaYbyX98QJI_g_NpOEGZ_IleGltllokt1nXKERBHAQY9dTBZiFhQvEA6m9qLs_6FWFXqGxsYn03GzLVzYcABX4NgP8zxt6uP6KEPcTggC-7zCvEexTv0wH-7n5M_eEdD5g23axmUssLagIe_W1hRIuv9bQ1q2gy2cnHqEMvU_6asjPYhGkNnoYqFlEOLcWhPn1Td26r3Av8N0zc0BagYRAYkb874CK_mbQaWp2uKgEz5FiJqR1u6pqugILqYywrKr8DNNC3yxhoCYM2cmSqcPYCu19KzORym_Vb78RkImigekoYdrQai3hCLnzNIYhvVr3RkFMoOsjyf0RGtm_1-G1s2gIDnWTzq2h9LArBg8BcEckVUR8P3R30b-5hTXM3LkU4aGTlBzdZHmUZzfCb_IFemst-tPo5W6kdvv60IkjqxDb1Um5hTlA5JBQBY77FgAfGAdy_Pl8kZfh2UJHR43EYxxPOKFPOC6TSy1hkjhat3Ee5DEY-aBgMZireVJAnSMs0nQcBNdd_8MKRsehKFoiQlpmCBl82IUDSoMVpWe__6cp--qAMWPPLBrasOwPhAVL5TltWRTbZrJR49pA0M6x9QYGucI6ZuRURQHTzVUnoMjBkDCeZ1Y5eVG4iXUe_H6AItRjmzaTv7CXRRSEHrp8Oo9ttnNddveNhC5hoQcwk8OvQxVJv9xqwl5GI&uuid=7a7b4aa4-7c7b-483e-b33b-3f1c18c22608&authuser=2&nonce=7lhms13ed2v9m&user=16282622975581773921&hash=bqj53qujjcrhu5vpapac20kn77tavos8)
 
-## Getting Started
+# Frontend Engginer Challenge
 
-First, run the development server:
+This project was built with next js. This project aims to build a website with one page without refresh or SPA (Single Page Application) and has CRUD, Pagination, and Search Data features. For data this project uses fake data on gorest.co.in and displays a blogs, and CRUD on users. For Frontend deployment I use Vercel which is already in sync with my github.
 
-```bash
-npm run dev
-# or
-yarn dev
+## Features
+
+- Users Management
+- Serach Users
+- Pagination
+- Blog List & Blog Detail
+
+## Package
+
+- [Axios](https://www.npmjs.com/package/axios)
+- [Bootstrap](npmjs.com/package/bootstrap)
+- [Sweetalert2](https://sweetalert2.github.io/)
+- [Fontawesome](https://fontawesome.com/v5/docs/web/use-with/react#get-started)
+
+## Environment Variables
+
+Create an .env.local file to store a token to perform POST,UPDATE,DELETE must use tokens. Please login first to get token.
+
+```
+NEXT_PUBLIC_TOKEN = 'Your Token'
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run Locally
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Clone the project
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+  git clone https://github.com/ikehikeh151/next-blog.git
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Go to the project directory
 
-## Learn More
+```bash
+  cd next-blog
+```
 
-To learn more about Next.js, take a look at the following resources:
+Install dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Start the server for development
 
-## Deploy on Vercel
+```bash
+  npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Fake Data](https://gorest.co.in/)
+
+## Authors
+
+- [@fajarpratama](https://github.com/ikehikeh151)
