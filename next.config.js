@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['zwalet.herokuapp.com', 'localhost:3000'],
+    domains: ['localhost:3000'],
   },
 };
 

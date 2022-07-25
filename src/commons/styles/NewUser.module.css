@@ -12,9 +12,9 @@
 
 .wrapper-input-user {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-bottom: 20px;
   align-items: center;
-  flex-flow: wrap;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -90,4 +90,27 @@
 .btn-cansel:hover {
   background-color: #d87070;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper-input {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .wrapper-input-user {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .wrapper-input-user .wrapper-input:nth-child(3) {
+    margin-top: 20px;
+    /* margin-left: 44px !important; */
+  }
+
+  .wrapper-input-user .wrapper-input:nth-child(4) {
+    margin-top: 20px;
+    /* margin-left: 45px !important; */
+  }
 }

@@ -134,7 +134,7 @@ function NewUsers(props) {
           </div>
 
           <div className={styles['wrapper-input']}>
-            <p>Gender</p>
+            <p>Gender :</p>
             <div className="form-check">
               <input
                 className="form-check-input"
@@ -166,7 +166,7 @@ function NewUsers(props) {
           </div>
 
           <div className={styles['wrapper-input']}>
-            <p>Status</p>
+            <p>Status :</p>
             <div className="form-check">
               <input
                 className="form-check-input"
