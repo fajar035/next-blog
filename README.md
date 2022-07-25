@@ -1,4 +1,4 @@
-# Frontend Engginer Challenge
+# Frontend Engineer Challenge
 
 This project was built with next js. This project aims to build a website with one page without refresh or SPA (Single Page Application) and has CRUD, Pagination, and Search Data features. For data this project uses fake data on gorest.co.in and displays a blogs, and CRUD on users. For Frontend deployment I use Vercel which is already in sync with my github.
 
