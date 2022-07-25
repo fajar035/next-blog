@@ -2,9 +2,9 @@ import Layout from 'src/commons/components/Layout';
 import Card from 'src/commons/components/Card';
 import Header from 'src/commons/components/Header';
 import styles from 'src/commons/styles/Blog.module.css';
-import axios from 'axios';
 import ScrollButton from 'src/commons/components/BtnScrollTop';
 import { useRouter } from 'next/router';
+import axios from 'axios';
 
 function Blog({ posts, page }) {
   const router = useRouter();
