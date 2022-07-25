@@ -5,7 +5,7 @@ This project was built with next js. This project aims to build a website with o
 ## Features
 
 - Users Management
-- Serach Users
+- Search Users
 - Pagination
 - Blog List & Blog Detail
 
